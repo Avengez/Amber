@@ -4,7 +4,7 @@
 
 #include <Amberskies.h>
 
-#include <iostream>
+
 
 
 class Sandbox : public Amber::Application
@@ -31,8 +31,13 @@ Amber::Application* Amber::CreateApplication()
 
 int main(int argc, char* argv[])
 {
+    Amber::Log::Initialize();
 
-    std::cout << argc << " " << argv[0] << std::endl;
+    DEV_INFO(
+            "({0}) {1}",
+            argc,
+            argv[0]
+            );
 
     Amber::Welcome();
 

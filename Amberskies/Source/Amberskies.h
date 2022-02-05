@@ -14,6 +14,7 @@
 
 
 #include "Amberskies/Core/Application.h"
+#include "Amberskies/Core/Log.h"
 
 
 

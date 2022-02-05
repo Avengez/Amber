@@ -8,7 +8,11 @@ namespace Amber
     Application::Application()
     {
 
-        // Empty
+        //Log::Initialize();
+
+        AMBER_INFO(
+                "Application Constructed"
+                );
 
     }
 
