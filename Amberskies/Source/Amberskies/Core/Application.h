@@ -8,6 +8,8 @@
 
 
 #include "Common.h"
+#include "Amberskies/Core/Window.h"
+
 
 
 namespace Amber
@@ -15,6 +17,10 @@ namespace Amber
 
     class Application
     {
+
+        std::unique_ptr<Window> m_Window;
+
+        bool m_Running = true;
 
     public:
 

@@ -14,6 +14,11 @@ namespace Amber
                 "Application Constructed"
                 );
 
+        m_Window =
+                std::unique_ptr<Window>(
+                        Window::Create()
+                );
+
     }
 
 
@@ -31,18 +36,16 @@ namespace Amber
     void Application::Run()
     {
 
-        WindowResizeEvent event(
-                1280,
-                720
-                );
+        glClearColor(0.2f, 0.4f, 0.6f, 1.0f);
 
-        AMBER_TRACE(
-                event
-                );
+        while(m_Running)
+        {
 
-        while(
-                true
-                );
+            glClear(GL_COLOR_BUFFER_BIT);
+
+            m_Window->OnUpdate();
+
+        }
 
     }
 

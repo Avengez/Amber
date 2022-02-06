@@ -8,6 +8,13 @@ add_library(
         Source/Amberskies/Core/Log.cpp          Source/Amberskies/Core/Log.h
         Source/Amberskies/Events/Event.h        Source/Amberskies/Events/ApplicationEvent.h
         Source/Amberskies/Events/MouseEvent.h   Source/Amberskies/Events/KeyEvent.h
+        Source/Amberskies/Core/Window.h         Source/Amberskies/Renderer/GFXContext.h
+
+        Source/Platform/OpenGL/glad.c           Source/Platform/OpenGL/glad.h
+        Source/Platform/OpenGL/khrplatform.h
+        Source/Platform/OpenGL/OpenGLContext.cpp Source/Platform/OpenGL/OpenGLContext.h
+
+        Source/Platform/Windows/WindowsWindow.cpp Source/Platform/Windows/WindowsWindow.h
 )
 
 include_directories(Amberskies
@@ -17,6 +24,4 @@ target_include_directories(Amberskies
         PUBLIC ${CMAKE_SOURCE_DIR}/Amberskies/Dependencies/spdlog/include
         PUBLIC ${CMAKE_SOURCE_DIR}/Amberskies/Dependencies/GLFW/include)
 
-target_link_libraries(Amberskies
-        openGL32
-        glfw)
+target_link_libraries(Amberskies glfw)

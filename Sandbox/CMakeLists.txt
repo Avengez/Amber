@@ -8,6 +8,5 @@ target_include_directories(Sandbox
 )
 
 target_link_libraries(Sandbox
-        openGL32
         glfw
         Amberskies)
