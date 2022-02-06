@@ -1,13 +1,4 @@
 
-
-
-
-
-include_directories(Amberskies
-        ${CMAKE_CURRENT_SOURCE_DIR}/Dependencies/spdlog/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/Source
-        )
-
 add_library(
         Amberskies
 
@@ -18,3 +9,14 @@ add_library(
         Source/Amberskies/Events/Event.h        Source/Amberskies/Events/ApplicationEvent.h
         Source/Amberskies/Events/MouseEvent.h   Source/Amberskies/Events/KeyEvent.h
 )
+
+include_directories(Amberskies
+        ${CMAKE_CURRENT_SOURCE_DIR}/Source)
+
+target_include_directories(Amberskies
+        PUBLIC ${CMAKE_SOURCE_DIR}/Amberskies/Dependencies/spdlog/include
+        PUBLIC ${CMAKE_SOURCE_DIR}/Amberskies/Dependencies/GLFW/include)
+
+target_link_libraries(Amberskies
+        openGL32
+        glfw)
