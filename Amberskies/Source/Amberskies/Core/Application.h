@@ -8,7 +8,6 @@
 
 
 #include "Common.h"
-#include "Log.h"
 
 
 namespace Amber

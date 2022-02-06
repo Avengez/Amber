@@ -1,16 +1,9 @@
 
-add_executable(
-        Sandbox
+add_executable(Sandbox Source/Sandbox.cpp)
 
-        Source/Sandbox.cpp
+target_include_directories(Sandbox
+        PUBLIC ${CMAKE_SOURCE_DIR}/Amberskies/Dependencies/spdlog/include
+        PUBLIC ${CMAKE_SOURCE_DIR}/Amberskies/Source
 )
-
-target_include_directories(Amberskies INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/../Amberskies/Source)
-
-include_directories(Sandbox PRIVATE
-        ../Amberskies/Dependencies/spdlog/include
-        ../Amberskies/Source
-)
-
 
 target_link_libraries(Sandbox LINK_PUBLIC Amberskies)

@@ -31,7 +31,18 @@ namespace Amber
     void Application::Run()
     {
 
-        while(true);
+        WindowResizeEvent event(
+                1280,
+                720
+                );
+
+        AMBER_TRACE(
+                event
+                );
+
+        while(
+                true
+                );
 
     }
 

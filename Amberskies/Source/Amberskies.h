@@ -5,7 +5,19 @@
 #pragma once
 
 
-        #include <windows.h>
+#define AMBER_PLATFORM_WINDOWS
+#define AMBER_DEBUG
+
+
+#ifdef AMBER_PLATFORM_WINDOWS
+
+#include <Windows.h>
+
+#else
+
+#error Amber supports windows only
+
+#endif
 
 
 
@@ -15,6 +27,8 @@
 
 #include "Amberskies/Core/Application.h"
 #include "Amberskies/Core/Log.h"
+
+#include "Amberskies/Events/Event.h"
 
 
 
