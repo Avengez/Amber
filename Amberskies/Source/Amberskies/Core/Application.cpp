@@ -21,6 +21,9 @@
 namespace Amber
 {
 
+    Application* Application::s_Instance =
+            nullptr;
+
     Application::Application()
     {
 
@@ -37,6 +40,13 @@ namespace Amber
 
         m_Window->SetEventCallback(
                 BIND_EVENT_FN(Application::OnEvent)
+                );
+
+        m_ImGuiLayer =
+                new ImGuiLayer();
+
+        PushOverlay(
+                m_ImGuiLayer
                 );
 
     }
@@ -73,6 +83,13 @@ namespace Amber
 
             for (Layer* layer : m_LayerStack)
                 layer->OnUpdate(deltaTime);
+
+            m_ImGuiLayer->Begin();
+
+            for (Layer* layer : m_LayerStack)
+                layer->OnImGuiRender();
+
+            m_ImGuiLayer->End();
 
             m_Window->OnUpdate();
 

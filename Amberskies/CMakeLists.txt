@@ -38,10 +38,13 @@ add_library(
 )
 
 include_directories(Amberskies
-        ${CMAKE_CURRENT_SOURCE_DIR}/Source)
+        ${CMAKE_CURRENT_SOURCE_DIR}/Source
+)
 
 target_include_directories(Amberskies
         PUBLIC ${CMAKE_SOURCE_DIR}/Amberskies/Dependencies/spdlog/include
-        PUBLIC ${CMAKE_SOURCE_DIR}/Amberskies/Dependencies/GLFW/include)
+        PUBLIC ${CMAKE_SOURCE_DIR}/Amberskies/Dependencies/GLFW/include
+        PUBLIC ${CMAKE_SOURCE_DIR}/Amberskies/Dependencies/ImGui
+)
 
 target_link_libraries(Amberskies glfw)

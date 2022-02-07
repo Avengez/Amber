@@ -44,7 +44,8 @@ namespace Amber
 		
 		virtual void OnDetach() {}
 
-		virtual void OnUpdate(DeltaTime deltaTime) {}
+		virtual void OnUpdate(
+                DeltaTime deltaTime) {}
 
 		virtual void OnImGuiRender() {}
 
