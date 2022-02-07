@@ -24,10 +24,6 @@ add_library(
 
         Source/Platform/Windows/WindowsWindow.cpp Source/Platform/Windows/WindowsWindow.h
 
-        Dependencies/ImGui/backends/imgui_impl_glfw.cpp Dependencies/ImGui/backends/imgui_impl_glfw.h
-        Dependencies/ImGui/backends/imgui_impl_opengl3.cpp Dependencies/ImGui/backends/imgui_impl_opengl3.h
-                                                Dependencies/ImGui/backends/imgui_impl_opengl3_loader.h
-
 )
 
 include_directories(Amberskies
