@@ -1,6 +1,9 @@
 [submodule "Amberskies/Dependencies/GLFW"]
 	path = Amberskies/Dependencies/GLFW
 	url = https://github.com/glfw/glfw
+#[submodule "Amberskies/Dependencies/ImGui"]
+#	path = Amberskies/Dependencies/ImGui
+#	url =
 [submodule "Amberskies/Dependencies/ImGui"]
 	path = Amberskies/Dependencies/ImGui
 	url = https://github.com/ocornut/imgui
