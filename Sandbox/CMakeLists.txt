@@ -9,5 +9,7 @@ target_include_directories(Sandbox
 )
 
 target_link_libraries(Sandbox
+        opengl32
         glfw
+        imgui
         Amberskies)

@@ -16,6 +16,7 @@ add_library(
         Source/Amberskies/Core/Layer.cpp        Source/Amberskies/Core/Layer.h
         Source/Amberskies/Core/LayerStack.cpp   Source/Amberskies/Core/LayerStack.h
                                                 Source/Amberskies/Core/DeltaTime.h
+        Source/Amberskies/Gui/ImGuiLayer.cpp    Source/Amberskies/Gui/ImGuiLayer.h
 
         Source/Platform/OpenGL/glad.c           Source/Platform/OpenGL/glad.h
                                                 Source/Platform/OpenGL/khrplatform.h
@@ -23,14 +24,6 @@ add_library(
 
         Source/Platform/Windows/WindowsWindow.cpp Source/Platform/Windows/WindowsWindow.h
 
-                                                Dependencies/ImGui/imconfig.h
-        Dependencies/ImGui/imgui.cpp            Dependencies/ImGui/imgui.h
-        Dependencies/ImGui/imgui_demo.cpp
-        Dependencies/ImGui/imgui_draw.cpp       Dependencies/ImGui/imgui_internal.h
-        Dependencies/ImGui/imgui_tables.cpp
-        Dependencies/ImGui/imgui_widgets.cpp    Dependencies/ImGui/imstb_rectpack.h
-                                                Dependencies/ImGui/imstb_textedit.h
-                                                Dependencies/ImGui/imstb_truetype.h
         Dependencies/ImGui/backends/imgui_impl_glfw.cpp Dependencies/ImGui/backends/imgui_impl_glfw.h
         Dependencies/ImGui/backends/imgui_impl_opengl3.cpp Dependencies/ImGui/backends/imgui_impl_opengl3.h
                                                 Dependencies/ImGui/backends/imgui_impl_opengl3_loader.h
@@ -47,4 +40,4 @@ target_include_directories(Amberskies
         PUBLIC ${CMAKE_SOURCE_DIR}/Amberskies/Dependencies/ImGui
 )
 
-target_link_libraries(Amberskies glfw)
+target_link_libraries(Amberskies opengl32 glfw imgui)

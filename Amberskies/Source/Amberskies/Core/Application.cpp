@@ -42,13 +42,6 @@ namespace Amber
                 BIND_EVENT_FN(Application::OnEvent)
                 );
 
-        m_ImGuiLayer =
-                new ImGuiLayer();
-
-        PushOverlay(
-                m_ImGuiLayer
-                );
-
     }
 
 
@@ -73,8 +66,8 @@ namespace Amber
 
             glClear(GL_COLOR_BUFFER_BIT);
 
-            float time = 2000.0f;
-                    //(float)ImGui::GetTime();
+            float time =
+                    (float)ImGui::GetTime();
 
             DeltaTime deltaTime =
                     time - m_LastFrameTime;
@@ -84,12 +77,8 @@ namespace Amber
             for (Layer* layer : m_LayerStack)
                 layer->OnUpdate(deltaTime);
 
-            m_ImGuiLayer->Begin();
-
-            for (Layer* layer : m_LayerStack)
-                layer->OnImGuiRender();
-
-            m_ImGuiLayer->End();
+//            for (Layer* layer : m_LayerStack)
+//                layer->OnImGuiRender();
 
             m_Window->OnUpdate();
 
