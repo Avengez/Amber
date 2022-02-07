@@ -22,6 +22,19 @@ add_library(
         Source/Platform/OpenGL/OpenGLContext.cpp Source/Platform/OpenGL/OpenGLContext.h
 
         Source/Platform/Windows/WindowsWindow.cpp Source/Platform/Windows/WindowsWindow.h
+
+                                                Dependencies/ImGui/imconfig.h
+        Dependencies/ImGui/imgui.cpp            Dependencies/ImGui/imgui.h
+        Dependencies/ImGui/imgui_demo.cpp
+        Dependencies/ImGui/imgui_draw.cpp       Dependencies/ImGui/imgui_internal.h
+        Dependencies/ImGui/imgui_tables.cpp
+        Dependencies/ImGui/imgui_widgets.cpp    Dependencies/ImGui/imstb_rectpack.h
+                                                Dependencies/ImGui/imstb_textedit.h
+                                                Dependencies/ImGui/imstb_truetype.h
+        Dependencies/ImGui/backends/imgui_impl_glfw.cpp Dependencies/ImGui/backends/imgui_impl_glfw.h
+        Dependencies/ImGui/backends/imgui_impl_opengl3.cpp Dependencies/ImGui/backends/imgui_impl_opengl3.h
+                                                Dependencies/ImGui/backends/imgui_impl_opengl3_loader.h
+
 )
 
 include_directories(Amberskies
