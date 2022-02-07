@@ -9,6 +9,8 @@
 
 #include "Common.h"
 #include "Amberskies/Core/Window.h"
+#include "Amberskies/Core/LayerStack.h"
+#include "Amberskies/Core/DeltaTime.h"
 
 
 
@@ -22,6 +24,10 @@ namespace Amber
 
         bool m_Running = true;
 
+        LayerStack m_LayerStack;
+
+        float m_LastFrameTime = 0.0f;
+
     public:
 
         Application();
@@ -29,6 +35,16 @@ namespace Amber
         virtual ~Application();
 
         void Run();
+
+        void OnEvent(Event& event);
+
+        void PushLayer(Layer* layer);
+
+        void PushOverlay(Layer* overlay);
+
+    private:
+
+        bool OnWindowClose(WindowCloseEvent& event);
 
     };
 

@@ -27,6 +27,8 @@
 
 #include "Amberskies/Core/Application.h"
 #include "Amberskies/Core/Log.h"
+#include "Amberskies/Core/Layer.h"
+#include "Amberskies/Core/DeltaTime.h"
 
 #include "Amberskies/Events/Event.h"
 

@@ -7,12 +7,66 @@
 
 
 
+class FirstLayer : public Amber::Layer
+{
+
+    float m_SimpleTimer = 0.0f;
+
+public:
+
+    FirstLayer() :
+            Amber::Layer("FirstLayer")
+    {
+
+        DEV_INFO(
+                "First Layer Constructed"
+                );
+
+    }
+
+
+
+    void OnUpdate(Amber::DeltaTime deltaTime) override
+    {
+
+        float dt =
+                deltaTime.GetSeconds();
+
+        m_SimpleTimer +=
+                dt;
+
+        if (m_SimpleTimer >= 1)
+        {
+
+            DEV_INFO(
+                    "Delta time : {0}s   {1}ms",
+                    dt,
+                    deltaTime.GetMilliseconds()
+            );
+
+            m_SimpleTimer = 0.0f;
+
+        }
+
+    }
+
+};
+
+
+
 class Sandbox : public Amber::Application
 {
 
 public:
 
-    Sandbox() = default;
+    Sandbox()
+    {
+
+        PushLayer(
+                new FirstLayer()
+        );
+
+    }
 
     ~Sandbox() override = default;
 
@@ -29,15 +83,8 @@ Amber::Application* Amber::CreateApplication()
 
 
 
-int main(int argc, char* argv[])
+int main(/*int argc, char* argv[]*/)
 {
-    Amber::Log::Initialize();
-
-    DEV_INFO(
-            "({0}) {1}",
-            argc,
-            argv[0]
-            );
 
     Amber::Welcome();
 
