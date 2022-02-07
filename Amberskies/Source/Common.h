@@ -88,8 +88,6 @@
 #include "Amberskies/Events/KeyEvent.h"
 #include "Amberskies/Events/MouseEvent.h"
 
-//#include "Platform/OpenGL/glad.h"
-
 
 
 // Typedefs *********************************************
