@@ -1,6 +1,18 @@
-//
-// Created by DAOCa on 05/02/2022.
-//
+
+/**
+* ________________________________________________________
+*
+* Project Created by Frazor Sharp : 16/01/2022
+*
+* Twitch : Simple Server Programming in C/C++
+*
+* Contact Email : daocamberskies@googlemail.com
+* Github		: https://github.com/Avengez/Amber.git
+* Twitch		: frazorbladezsharp
+* Youtube		: Frazor Sharp
+*
+* ______________________________________________________*/
+
 
 #pragma once
 

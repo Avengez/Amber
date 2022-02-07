@@ -11,7 +11,7 @@
 * Twitch : Simple Server Programming in C/C++
 *
 * Contact Email : daocamberskies@googlemail.com
-* Github		: https://github.com/Avengez/Amberskies.git
+* Github		: https://github.com/Avengez/Amber.git
 * Twitch		: frazorbladezsharp
 * Youtube		: Frazor Sharp
 *
